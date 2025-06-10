@@ -355,6 +355,12 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Couleur visible pour les icônes des features */
+.feature-icon .mdi {
+  color: #D4A574; 
+  font-size: 2.5rem;
+}
+
 .feature-card h3 {
   font-size: 1.5rem;
   font-weight: 600;
