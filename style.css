@@ -87,7 +87,6 @@ body {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
 }
 
 .mobile-menu-toggle {
@@ -173,7 +172,6 @@ body {
 
 .primary-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.4);
 }
 
 .secondary-button {
@@ -207,7 +205,6 @@ body {
     background: #FBFFEE;
     border-radius: 30px;
     padding: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
@@ -235,7 +232,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-avatar {
@@ -272,7 +268,6 @@ body {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .my-dogs-section h3 {
@@ -340,14 +335,11 @@ body {
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .feature-icon {
@@ -425,7 +417,6 @@ body {
     padding: 1.5rem;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .stat-number {
@@ -471,7 +462,6 @@ body {
     align-items: center;
     gap: 1rem;
     background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
     color: white;
     padding: 1rem 1.5rem;
     border-radius: 15px;
