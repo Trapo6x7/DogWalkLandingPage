@@ -48,7 +48,10 @@
       rel="stylesheet"
     />
     <!-- Ajout des Material Design Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -92,7 +95,7 @@
             </div>
           </article>
           <aside class="hero-image" aria-label="Aperçu de l'application">
-            {# IMAGE #}
+            <img src="img/403shots_so.png" alt="DogWalk Name" />
           </aside>
         </div>
       </section>
@@ -102,7 +105,9 @@
           <h2 class="section-title">Fonctionnalités principales</h2>
           <div class="features-grid">
             <article class="feature-card">
-              <div class="feature-icon"><i class="mdi mdi-account-group"></i></div>
+              <div class="feature-icon">
+                <i class="mdi mdi-account-group"></i>
+              </div>
               <h3>Groupes de promenade</h3>
               <p>
                 Rejoignez ou créez des groupes pour organiser des promenades
@@ -110,7 +115,9 @@
               </p>
             </article>
             <article class="feature-card">
-              <div class="feature-icon"><i class="mdi mdi-map-marker-radius"></i></div>
+              <div class="feature-icon">
+                <i class="mdi mdi-map-marker-radius"></i>
+              </div>
               <h3>Géolocalisation</h3>
               <p>
                 Trouvez facilement les parcs et espaces verts près de chez vous
@@ -208,37 +215,55 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <span class="brand-name">dogwalk</span>
+            <span class="brand-name">
+              <img src="img/mimilogo.png" alt="DogWalk Name" class="logo2" />
+            </span>
             <p>
               L'application qui rapproche les chiens et leurs propriétaires.
             </p>
           </div>
           <nav class="footer-links" aria-label="Liens du pied de page">
-            <div class="link-group">
-              <h4>Application</h4>
-              <ul>
-                <li><a href="#">Télécharger</a></li>
-                <li><a href="#">Fonctionnalités</a></li>
-                <li><a href="#">Support</a></li>
-              </ul>
-            </div>
-            <div class="link-group">
-              <h4>Communauté</h4>
-              <ul>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Forum</a></li>
-                <li><a href="#">Événements</a></li>
-              </ul>
-            </div>
-            <div class="link-group">
-              <h4>Contact</h4>
-              <ul>
-                <li>
-                  <a href="mailto:contact@dogwalk.app">contact@dogwalk.app</a>
-                </li>
-                <li><a href="#">Aide</a></li>
-                <li><a href="#">Confidentialité</a></li>
-              </ul>
+            <div class="accordion-group">
+              <div class="accordion-item">
+                <button class="accordion-toggle" aria-expanded="false">
+                  Application
+                </button>
+                <div class="accordion-panel">
+                  <ul>
+                    <li><a href="#">Télécharger</a></li>
+                    <li><a href="#">Fonctionnalités</a></li>
+                    <li><a href="#">Support</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-toggle" aria-expanded="false">
+                  Communauté
+                </button>
+                <div class="accordion-panel">
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Événements</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-toggle" aria-expanded="false">
+                  Contact
+                </button>
+                <div class="accordion-panel">
+                  <ul>
+                    <li>
+                      <a href="mailto:contact@dogwalk.app"
+                        >contact@dogwalk.app</a
+                      >
+                    </li>
+                    <li><a href="#">Aide</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </nav>
         </div>
@@ -249,5 +274,41 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Accordéon Footer Responsive
+        const accordions = document.querySelectorAll(
+          ".footer .accordion-toggle"
+        );
+        accordions.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const panel = btn.nextElementSibling;
+            const expanded = btn.getAttribute("aria-expanded") === "true";
+            btn.setAttribute("aria-expanded", !expanded);
+            if (!expanded) {
+              panel.classList.add("open");
+            } else {
+              panel.classList.remove("open");
+            }
+            // Ferme les autres
+            accordions.forEach((otherBtn) => {
+              if (otherBtn !== btn) {
+                otherBtn.setAttribute("aria-expanded", "false");
+                if (otherBtn.nextElementSibling) {
+                  otherBtn.nextElementSibling.classList.remove("open");
+                }
+              }
+            });
+          });
+        });
+        // Par défaut, tout fermé au chargement
+        accordions.forEach((btn) => {
+          btn.setAttribute("aria-expanded", "false");
+          if (btn.nextElementSibling) {
+            btn.nextElementSibling.classList.remove("open");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
