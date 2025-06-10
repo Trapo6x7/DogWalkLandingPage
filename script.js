@@ -108,16 +108,6 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Effet parallax léger sur le hero
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const rate = scrolled * -0.5;
-    
-    if (hero) {
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
 
 // Gestion des boutons CTA
 document.querySelectorAll('.primary-button, .cta-button').forEach(button => {
